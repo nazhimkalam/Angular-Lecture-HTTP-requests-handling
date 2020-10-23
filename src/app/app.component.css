@@ -1,3 +1,13 @@
-p {
-  font-family: Lato;
+#app-component{
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 1;
+  text-align: center;
+  margin: 20px;
+}
+#app-component button{
+  max-width: 200px;
+  margin: 0 auto;
 }
