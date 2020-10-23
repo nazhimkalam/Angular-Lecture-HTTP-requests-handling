@@ -1,4 +1,4 @@
-#app-component{
+#app-component {
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   text-align: center;
   margin: 20px;
 }
-#app-component button{
+#app-component button {
   max-width: 200px;
   margin: 0 auto;
 }
