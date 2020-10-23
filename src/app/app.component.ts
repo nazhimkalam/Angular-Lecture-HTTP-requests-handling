@@ -8,11 +8,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-lecture3';
+  chuckyJoke = '';
+  constructor(private jokeService: JokeService) {
 
-  constructor(private jokeService: JokeService) {}
+  }
 
-  getJokes() {
-    const jokes = this.jokeService.getJokes();
-    console.log(jokes);
+  async getJokes() {
+
+    try {
+
+      const joke: any = await this.jokeService.getJokes();
+      
+      const jokeValue = joke.value;
+      
+      this.chuckyJoke = jokeValue;
+
+      console.log(joke);
+    } 
+    catch (e) {
+    
+      console.log(`Error ----> ${e}`);
+    
+    }
+
   }
 }

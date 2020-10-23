@@ -8,6 +8,13 @@ export class JokeService {
   constructor(private httpClient: HttpClient) {}
 
   getJokes() {
-    this.httpClient.get('https://api.chucknorris.io/jokes/random');
+    try {
+      return this.httpClient
+        .get('https://api.chucknorris.io/jokes/random')
+        .toPromise();
+    } catch (error) {
+      console.log(`Error -> ${error}`);
+      return null;
+    }
   }
 }
